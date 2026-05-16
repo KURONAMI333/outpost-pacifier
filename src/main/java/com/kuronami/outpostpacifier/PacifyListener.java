@@ -10,11 +10,14 @@ import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 /**
  * Cancels <em>natural</em> hostile spawns inside a pacified zone.
  *
- * <p>Only blocks new spawns of {@link Monster} via natural-style spawn
- * types (so the pillager outpost / cave hostiles stop coming back). It
- * never touches player-made spawners, spawn eggs, commands, breeding,
- * etc., and never removes mobs that already exist — purely preventative,
- * exactly the scope the request asks for.
+ * <p>Blocks new {@link Monster} spawns ONLY from the two "the area keeps
+ * repopulating itself" sources: {@code NATURAL} and
+ * {@code CHUNK_GENERATION}. It deliberately does NOT touch
+ * {@code STRUCTURE} (one-time worldgen placement), {@code PATROL}
+ * (roaming pillager patrols / the raid system), {@code REINFORCEMENT},
+ * {@code JOCKEY}, spawners, spawn eggs, commands or breeding, and never
+ * removes mobs that already exist — purely preventative, matching the
+ * stated scope ("stop natural respawns in this spot") exactly.
  */
 public class PacifyListener {
 
@@ -24,11 +27,13 @@ public class PacifyListener {
             return;
         }
         switch (event.getSpawnType()) {
-            case NATURAL, CHUNK_GENERATION, STRUCTURE, PATROL, REINFORCEMENT, JOCKEY -> {
-                // these are the "keeps respawning" sources we block
+            case NATURAL, CHUNK_GENERATION -> {
+                // the only "the area keeps repopulating" sources we block
             }
             default -> {
-                return; // spawner / egg / command / breeding etc. left alone
+                // STRUCTURE / PATROL / REINFORCEMENT / JOCKEY / spawner /
+                // egg / command / breeding — all left alone (out of scope)
+                return;
             }
         }
         ServerLevel level = event.getLevel().getLevel();
