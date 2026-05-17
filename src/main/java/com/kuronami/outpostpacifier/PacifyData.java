@@ -31,15 +31,30 @@ public class PacifyData extends SavedData {
         }
     }
 
+    /** Hard cap so an op (or a script) repeatedly running /pacify can't
+     *  bloat the save or the per-spawn O(zones) scan without bound. */
+    private static final int MAX_ZONES = 256;
+
     private final List<Zone> zones = new ArrayList<>();
 
     public static PacifyData get(MinecraftServer server) {
         return server.overworld().getDataStorage().computeIfAbsent(FACTORY, NAME);
     }
 
-    public void add(Zone z) {
+    /** @return true if added; false if a duplicate or the cap was hit. */
+    public boolean add(Zone z) {
+        for (Zone existing : zones) {
+            if (existing.dim().equals(z.dim()) && existing.x() == z.x()
+                    && existing.z() == z.z() && existing.radius() == z.radius()) {
+                return false; // exact duplicate — no-op
+            }
+        }
+        if (zones.size() >= MAX_ZONES) {
+            return false; // cap reached
+        }
         zones.add(z);
         setDirty();
+        return true;
     }
 
     /** Remove every zone covering (dim, x, z); returns how many were removed. */

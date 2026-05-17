@@ -38,7 +38,7 @@ Server-side. Hooks vanilla natural-spawn finalization to cancel hostiles inside 
 
 ## Known limitations
 
-Zones are axis-aligned spheres around the command position. It suppresses *natural* hostile spawning only — it does not remove already-spawned mobs (clear them once) and does not affect spawners or trial chambers.
+Zones are axis-aligned square columns (any Y) around the command position. It cancels only **natural / world-gen** hostile spawns — it does NOT touch pillager patrols & raids, structure-placed mobs, reinforcements, spawners, trial chambers, spawn eggs or commands, and does not remove already-spawned mobs (clear them once). `/unpacify` removes **every** zone overlapping your current position (not just one) — stand clear of others to remove a single zone. Up to 256 zones are kept (further `/pacify` calls and exact duplicates are ignored).
 
 ## Install
 
