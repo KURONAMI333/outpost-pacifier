@@ -1,0 +1,33 @@
+# Outpost Pacifier - Forge 1.21.1 mods.toml
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+displayURL="https://github.com/KURONAMI333/outpost-pacifier"
+issueTrackerURL="https://github.com/KURONAMI333/outpost-pacifier/issues"
+description='''
+${mod_description}
+'''
+
+# No [[mixins]]: Outpost Pacifier listens to the vanilla-style
+# MobSpawnEvent.FinalizeSpawn and stores a small per-world zone list.
+# No mixin, no registered game object, no passive tick task.
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    type="required"
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

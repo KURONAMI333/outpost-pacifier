@@ -1,0 +1,9 @@
+{
+    "pacify.playeronly": "플레이어로, 존으로 만들 위치에 서서 실행하세요.",
+    "pacify.added": "여기를 반경 %1$s블록 존으로 설정 (중심 %2$s, %3$s). 내부의 자연 적대 스폰을 차단해요.",
+    "pacify.removed": "이 지점을 덮는 존 %s개를 해제했어요. 여기 다시 자연 스폰됩니다.",
+    "pacify.removed.none": "이 지점을 덮는 존이 없어요.",
+    "pacify.list.title": "평화 존 목록 (%s):",
+    "pacify.list.entry": "  %1$s @ (%2$s, %3$s), 반경 %4$s",
+    "pacify.list.none": "평화 존이 없어요."
+}

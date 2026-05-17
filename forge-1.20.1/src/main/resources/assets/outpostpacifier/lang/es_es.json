@@ -1,0 +1,9 @@
+{
+    "pacify.playeronly": "Ejecútalo como jugador, parado donde quieres la zona.",
+    "pacify.added": "Zona de radio %1$s bloques creada aquí (centro %2$s, %3$s). Dentro se bloquean los spawns hostiles naturales.",
+    "pacify.removed": "Se quitaron %s zona(s) que cubrían este punto. Aquí vuelven a aparecer hostiles naturales.",
+    "pacify.removed.none": "Ninguna zona cubre este punto.",
+    "pacify.list.title": "Zonas pacificadas (%s):",
+    "pacify.list.entry": "  %1$s @ (%2$s, %3$s), radio %4$s",
+    "pacify.list.none": "Sin zonas pacificadas."
+}

@@ -1,0 +1,9 @@
+{
+    "pacify.playeronly": "Run this as a player, standing where you want the zone.",
+    "pacify.added": "Pacified a %s-block-radius zone here (center %s, %s). Natural hostile spawns are now blocked inside it.",
+    "pacify.removed": "Cleared %s pacified zone(s) covering this spot. Natural hostiles can spawn here again.",
+    "pacify.removed.none": "No pacified zone covers this spot.",
+    "pacify.list.title": "Pacified zones (%s):",
+    "pacify.list.entry": "  %s @ (%s, %s), radius %s",
+    "pacify.list.none": "No pacified zones."
+}

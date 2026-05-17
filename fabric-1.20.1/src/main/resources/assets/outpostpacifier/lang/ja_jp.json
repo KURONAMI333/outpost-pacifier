@@ -1,0 +1,9 @@
+{
+    "pacify.playeronly": "プレイヤーとして、ゾーンにしたい場所に立って実行してね。",
+    "pacify.added": "ここを半径 %1$s ブロックのゾーンに（中心 %2$s, %3$s）。内側は自然な敵対湧きをブロックする。",
+    "pacify.removed": "この地点を覆うゾーンを %s 個解除。ここはまた自然湧きするよ。",
+    "pacify.removed.none": "この地点を覆うゾーンは無い。",
+    "pacify.list.title": "ゾーン一覧（%s）：",
+    "pacify.list.entry": "  %1$s @ (%2$s, %3$s)、半径 %4$s",
+    "pacify.list.none": "ゾーンは無い。"
+}

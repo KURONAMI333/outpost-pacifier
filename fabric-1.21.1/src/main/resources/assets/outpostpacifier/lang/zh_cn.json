@@ -1,0 +1,9 @@
+{
+    "pacify.playeronly": "请以玩家身份，站在你想设为区域的位置执行。",
+    "pacify.added": "已在此设置半径 %1$s 格的区域（中心 %2$s, %3$s）。区域内自然敌对生成被阻止。",
+    "pacify.removed": "已移除覆盖此处的 %s 个区域。这里又会自然生成敌对生物了。",
+    "pacify.removed.none": "没有区域覆盖此处。",
+    "pacify.list.title": "和平区域（%s）：",
+    "pacify.list.entry": "  %1$s @ (%2$s, %3$s)，半径 %4$s",
+    "pacify.list.none": "没有和平区域。"
+}

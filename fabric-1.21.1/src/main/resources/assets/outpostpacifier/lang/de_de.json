@@ -1,0 +1,9 @@
+{
+    "pacify.playeronly": "Als Spieler ausführen, an der Stelle stehend, die du als Zone willst.",
+    "pacify.added": "Zone mit %1$s-Block-Radius hier gesetzt (Zentrum %2$s, %3$s). Natürliche feindliche Spawns sind darin jetzt blockiert.",
+    "pacify.removed": "%s befriedete Zone(n) an dieser Stelle entfernt. Hier können wieder Feinde spawnen.",
+    "pacify.removed.none": "Keine befriedete Zone deckt diese Stelle ab.",
+    "pacify.list.title": "Befriedete Zonen (%s):",
+    "pacify.list.entry": "  %1$s @ (%2$s, %3$s), Radius %4$s",
+    "pacify.list.none": "Keine befriedeten Zonen."
+}
