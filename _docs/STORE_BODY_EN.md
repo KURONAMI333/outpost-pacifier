@@ -1,59 +1,20 @@
 # Outpost Pacifier
 
-> Found a great base spot right next to a pillager outpost (or any structure) that won't stop spawning mobs? Mark a zone and it goes quiet — permanently.
+Mark a zone and natural mob spawning inside it stops — permanently and reversibly. For when you've found a base spot next to a pillager outpost (or any structure) that won't stop spawning hostiles.
 
-A recurring r/feedthebeast request (32↑): "a mod that lets me completely clear out pillager outposts so pillagers stop spawning — found a great base spot but there's an outpost next to it." Vanilla has no toggle; datapack workarounds are global and clunky. Outpost Pacifier lets you silence a specific area.
-
-- 🛡️ Mark a no-natural-spawn zone around where you stand
-- 📏 Adjustable radius (8–128)
-- 💾 Zones persist across restarts
-- ↩️ Fully reversible
-
-## What it does / Usage
+Vanilla has no per-area spawn toggle, and datapack workarounds are global and clunky. Outpost Pacifier silences a specific area you choose and leaves everywhere else alone.
 
 Op-only (permission level 2):
 
 - `/pacify` — add a zone at your position (default radius)
 - `/pacify <8-128>` — add a zone with an explicit radius
 - `/pacify list` — list active zones
-- `/unpacify` — remove a zone
+- `/unpacify` — remove every zone overlapping your position
 
-Natural hostile spawns inside a pacified zone are cancelled; everywhere else is untouched. Spawners and mob-farm spawns are not affected — this targets the *natural* spawning that makes a nearby outpost/structure annoying.
+Natural hostile spawns inside a pacified zone are cancelled; everywhere else is untouched. Zones are axis-aligned square columns (any Y) and persist across restarts. It cancels only natural / world-gen spawns — it does not touch patrols, raids, structure-placed mobs, reinforcements, spawners, trial chambers, spawn eggs, or already-spawned mobs (clear those once). Up to 256 zones are kept.
 
-## Supported loaders / versions
+It hooks vanilla spawn finalization only — no mixin, no custom blocks or items, no config.
 
-| Minecraft | NeoForge | Forge | Fabric |
-|---|:---:|:---:|:---:|
-| 1.21.1 | ✅ | ✅ | ✅ |
-| 1.20.1 | — | ✅ | ✅ |
+Server-side — install on the server only.
 
-Ships for NeoForge / Forge / Fabric on Minecraft 1.21.1, and Forge / Fabric on Minecraft 1.20.1 (NeoForge has no 1.20.1 build). Server-side, dependency-free, identical behaviour on every loader.
-
-## Dependencies
-
-None.
-
-## Compatibility & scope
-
-Server-side. Hooks vanilla natural-spawn finalization to cancel hostiles inside marked zones; persistent zone data via vanilla world storage. No custom blocks/items, no config.
-
-## Known limitations
-
-Zones are axis-aligned square columns (any Y) around the command position. It cancels only **natural / world-gen** hostile spawns — it does NOT touch pillager patrols & raids, structure-placed mobs, reinforcements, spawners, trial chambers, spawn eggs or commands, and does not remove already-spawned mobs (clear them once). `/unpacify` removes **every** zone overlapping your current position (not just one) — stand clear of others to remove a single zone. Up to 256 zones are kept (further `/pacify` calls and exact duplicates are ignored).
-
-## Install
-
-1. Install your mod loader — NeoForge, Forge, or Fabric — for Minecraft 1.21.1 or 1.20.1.
-2. Drop `outpostpacifier-0.1.0.jar` into `mods/`. Server-side.
-
-- Minecraft 1.21.1 · NeoForge · JDK 21
-
-## Languages
-
-Output localized in 9 languages (machine-baseline; native-speaker PRs welcome).
-
-## License
-
-MIT — modpack inclusion welcome, no credit required.
-
-Author: KURONAMI
+Free to use in any modpack. Source and issues: https://github.com/KURONAMI333/outpost-pacifier
