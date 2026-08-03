@@ -42,3 +42,6 @@ repo/
 ### 3rd-party jars (NOT redistributable) ###
 libs-local/
 **/libs-local/
+
+# JUnit runs drop a client log here
+logs/
