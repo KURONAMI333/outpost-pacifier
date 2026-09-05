@@ -1,5 +1,3 @@
-# Outpost Pacifier
-
 Mark a zone and natural mob spawning inside it stops — permanently and reversibly. For when you've found a base spot next to a pillager outpost (or any structure) that won't stop spawning hostiles.
 
 Vanilla has no per-area spawn toggle, and datapack workarounds are global and clunky. Outpost Pacifier silences a specific area you choose and leaves everywhere else alone.
@@ -15,6 +13,6 @@ Natural hostile spawns inside a pacified zone are cancelled; everywhere else is 
 
 It hooks vanilla spawn finalization only — no mixin, no custom blocks or items, no config.
 
-Server-side — install on the server only.
+Bugs and questions: comment on the CurseForge page, or DM @kuronami333 on X.
 
-Free to use in any modpack. Source and issues: https://github.com/KURONAMI333/outpost-pacifier
+All Rights Reserved. Modpack inclusion is allowed without permission or credit. Source: https://github.com/KURONAMI333/outpost-pacifier
